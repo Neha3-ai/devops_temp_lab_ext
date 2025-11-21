@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Random Mini Landing — Nova</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="#">NovaLab</a>
+      <nav class="nav">
+        <a href="#features">Features</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>Mini landing page that actually looks nice</h1>
+          <p>Random, responsive, and simple. Built to be copied, tweaked, and reused — have fun!</p>
+          <div class="hero-ctas">
+            <a class="btn primary" href="#features">Explore</a>
+            <a class="btn ghost" href="#contact">Get in touch</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="mock-device">
+            <div class="screen">
+              <h3>Quick preview</h3>
+              <p>Clean UI • Small CSS • No frameworks</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="container features">
+      <article class="feature">
+        <h3>Responsive</h3>
+        <p>Looks great on phones, tablets, and desktops with a single column flow that adapts to width.</p>
+      </article>
+      <article class="feature">
+        <h3>Modern styles</h3>
+        <p>Uses CSS variables, subtle shadows and smooth interactions for a contemporary feel.</p>
+      </article>
+      <article class="feature">
+        <h3>Accessible</h3>
+        <p>Readable sizes, focus outlines and good color contrast for better accessibility.</p>
+      </article>
+    </section>
+
+    <section id="gallery" class="container gallery">
+      <div class="tile">✨ Tile 1</div>
+      <div class="tile">⚡ Tile 2</div>
+      <div class="tile">🔥 Tile 3</div>
+    </section>
+
+    <section id="contact" class="container contact">
+      <h2>Say hi</h2>
+      <form class="contact-form" onsubmit="alert('Form submitted — pretend!'); return false;">
+        <label>
+          <span>Name</span>
+          <input type="text" placeholder="Your name" required />
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" placeholder="you@example.com" required />
+        </label>
+        <label>
+          <span>Message</span>
+          <textarea rows="4" placeholder="Write a short message"></textarea>
+        </label>
+        <button class="btn primary" type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> NovaLab — made for practice</small>
+    </div>
+  </footer>
+
+  <script>
+    // small script: set year and keyboard shortcut to toggle theme
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Press "t" to toggle dark theme (fun little helper)
+    window.addEventListener('keydown', (e) => {
+      if (e.key.toLowerCase() === 't' && !e.metaKey && !e.ctrlKey) {
+        document.documentElement.classList.toggle('dark');
+      }
+    });
+  </script>
+</body>
+</html>
